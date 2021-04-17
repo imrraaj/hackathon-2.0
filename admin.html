@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin-Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<style>
+    ul {
+        float: right;
+        list-style-type: none;
+
+    }
+
+    ul li {
+        display: inline-block;
+        margin-top: 50px;
+
+    }
+
+    ul li a {
+        text-decoration: none;
+        color: black;
+        padding: 5px 20px;
+        border: 2px solid transparent;
+        transition: 0.4s ease;
+
+    }
+
+    ul li a:hover {
+        background-color: black;
+        color: white;
+    }
+
+    ul li.active a {
+        background-color: #fff;
+        color: #000;
+
+    }
+</style>
+</head>
+<body>
+    <header>
+            <ul class="nav justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="hackathon-home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./form.html">Log In</a>
+                </li>
+            </ul>
+    </header>
+    <form>
+
+        <section class="text-gray-600 body-font">
+            <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+                <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+            <img class="object-cover object-center rounded" alt="hero" src="1.png">
+        </div>
+          <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Number of vacant beds
+            </h1>
+            <label for="text" class="leading-7 text-sm text-gray-600"></label>
+            <input type="number" id="vac_bed" name="vac_bed" placeholder="Enter Here"
+            class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+        </div>
+        </div>
+    </section>
+    
+    <section class="text-gray-600 body-font">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+                <img class="object-cover object-center rounded" alt="hero" src="1.png">
+            </div>
+          <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Available Medicine
+            </h1>
+            <label for="text" class="leading-7 text-sm text-gray-600"></label>
+            <input type="number" id="med" name="medicine" placeholder="Enter Here"
+                class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            </div>
+        </div>
+      </section>
+      
+      <section class="text-gray-600 body-font">
+          <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+              <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+                <img class="object-cover md:object-scale-down object-center rounded" alt="hero" src="1.png">
+            </div>
+          <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Oxygen Supply
+            </h1>
+            <!-- <label for="text" class="leading-7 text-sm text-gray-600"></label> -->
+            <input type="number" id="oxy_supply" name="oxy_supply" placeholder="Enter Here"
+                class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            </div>
+        </div>
+    </section>
+    <button type="submit" class="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
+
+    
+</form>
+</body>
+</html>
