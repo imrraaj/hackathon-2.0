@@ -9,7 +9,7 @@ const error404 = fs.readFileSync('404.html');
 
 
 const hostname = "127.0.0.1";
-const port = "3000";
+const port = process.env.PORT || 80;
 
 
 const server = http.createServer((req, res) => {
