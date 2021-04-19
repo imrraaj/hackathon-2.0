@@ -7,7 +7,7 @@ const services = fs.readFileSync('services.html');
 const error404 = fs.readFileSync('404.html');
 
 const port = (process.env.PORT);
-
+const hostname = "https://raajpatel.herokuapp.com/"
 
 const server = http.createServer((req, res) => {
     console.log(req.url);
@@ -35,6 +35,6 @@ const server = http.createServer((req, res) => {
     }
 });
 
-server.listen(port, () => {
+server.listen(port, hostname,() => {
     console.log(`server running`)
 });
