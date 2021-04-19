@@ -6,10 +6,7 @@ const contact = fs.readFileSync('contact.html');
 const services = fs.readFileSync('services.html');
 const error404 = fs.readFileSync('404.html');
 
-
-
-const hostname = "127.0.0.1";
-const port = process.env.PORT || 80;
+const port = (process.env.PORT);
 
 
 const server = http.createServer((req, res) => {
@@ -38,6 +35,6 @@ const server = http.createServer((req, res) => {
     }
 });
 
-server.listen(port, hostname, () => {
-    console.log(`server running at http://${hostname}:${port}/`)
+server.listen(port, () => {
+    console.log(`server running`)
 });
