@@ -4,7 +4,7 @@ const home = fs.readFileSync('home.html');
 const about = fs.readFileSync('about.html');
 const contact = fs.readFileSync('contact.html');
 const services = fs.readFileSync('services.html');
-const error404 = fs.readFileSync('404.html');
+const error404 = fs.readFileSync('error404.html');
 
 const port = process.env.PORT || 3000;
 
