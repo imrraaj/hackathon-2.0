@@ -1,23 +1,15 @@
 {
-  "name": "node-example",
+  "name": "The Test Package",
   "version": "1.0.0",
-  "description": "This example is so cool.",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "example",
-    "heroku"
-  ],
-  "author": "Raaj",
-  "license": "MIT",
-  "dependencies": {
-    "express": "^4.9.8"
-     
-  },
-   "engines": {
+  "main": "index.js",
+    "engines": {
     "node": "14.x",
     "npm": "6.x.x"
+  }, 
+  "author": "The Raj",
+  "license": "a",
+  "dependencies": {
+    "telegraf": "^4.1.0",
+    "axios": "*"
   }
 }
