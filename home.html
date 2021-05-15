@@ -1,59 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="budhha.css">
     <title>Home</title>
     <style>
-        ul {
-            text-decoration: none;
-            margin: 0;
-            padding: 0;
-            float: right;
-            list-style-type: none;
+        *{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: lightcoral;
+}
 
-        }
+.container{
+    height: 100vh;
+    width: 100%;
+    background-color: #000000;
+    background-image: url(./styles/budhha.jpg);
+    /* opacity: 20%; */
+    background-position: center;
+    background-size: cover;
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.navbar ul li{
+    display: inline-block;
+    margin: 6px;
+    padding: 6px 3px;
+    margin-top: 20px;
+    
+}
+.navbar ul li a{
+    text-decoration: none;
+    transition: 0.4s;
+}
+.navbar ul li a:hover{
+    margin: 0 1px;
+    text-decoration: underline 2px white;
+    background-color: white;
 
-        li {
-            margin-top: 20px;
-            padding-left: 15px;
-            display: inline-block;
-        }
+}
 
-        ul li a {
-            text-decoration: none;
-            color: rgb(31, 123, 167);
-            padding: 5px 20px;
-            border: 2px solid transparent;
-            transition: 0.4s ease;
-        }
+.search{
+    position: absolute;
+    padding-left: 20px;
+    margin-left: 20px;
+    top: 35%;
+    left: -1%;
+}
+.search input{
 
-        ul li a:hover {
-            padding: 10px;
-            background-color: black;
-            color:rgb(255, 255, 255);
+    height: 34px;
+    width: 191px;
+    padding-left: 15px;
+    border-radius: 24px;
+    outline: none;
+    background: transparent;
+    color: white;
+    border: 2px solid indianred;
+    font-size: 17px;
+}
+.line{
+    position: absolute;
+    top: 43%;
+    width: 300px;
+    height: 3px;
+    background-color: lightcoral;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.content{
+    position: absolute;
+    top: 50%;
+    /* margin-top: 30px; */
+    justify-content: center;
+    padding-left: 20px;
+}
+.content h1{
+    color: wheat;
+    font-size: 40px;
+    margin-bottom: 33px;
+}
+.content p{
+    width: 42%;
+}
+.content .btn{
+    color: white;
+    margin-top: 42px;
+    margin-left: 335px;
+    padding: 8px 14px;
+    outline: none;
+    background: transparent;
+    border: 2px solid indianred;
+    border-radius: 24px;
+    
+}
+.btn:hover{
+    background-color: indianred;
+}
+.social{
+    position: absolute;
+    right: -80px;
+    top: 52%;
+    /* justify-content: center; */
+    transform: rotate(-90deg);
+}
+.social li{
+    list-style: none;
+    display: inline;
+    /* margin: 2px; */
+    padding: 4px 10px;
+    background-color: white;
+    /* margin: 135px 5px; */
+    
+}
+.credit{
+    font-size: 10px;
+    position: absolute;
+    top: 95%;
+    right: 1%;
+}
+
+
+@media (max-width:500px){
+    .container{
+        background-repeat: no-repeat;
+        background-position: cover;
+        /* background-size: 473px 218px; */
+    }
+    .content h1{
+        color: wheat;
+        font-size: 30px;
+        /* margin-bottom: 33px; */
+    }
+    .container p{
+        width: 50%;
+    }
+    .content .btn{
+        position: absolute;
+        top: 70%;
+        outline: none;
+        background: transparent;
+        border: 2px solid indianred;
+        border-radius: 24px;
+    }
+    .btn:hover{
+        background-color: indianred;
+    }
+    .social{
+        width: 70%;
+        display: inline;
+        transform: rotate(0deg);
+        padding-top: 2px;
+        top:98%;
+        left:20%;
         }
+    }
+
+}
     </style>
 </head>
-
-<body>
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/services">Services</a></li>
-            <li><a href="/contact">Contact</a></li>
-        </ul>
-    </nav>
     
+<body>
     <div class="container">
-        <h1>
-            <p>HOME</p>
-            <h1>This is Home of the site of Raaj Patel</h1>
+        <div class="navbar">
+            <nav>
+                <ul >
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Artists</a></li>
+                    <li><a href="">Exhibitions</a></li>
+                    <li><a href="">Events</a></li>
+                    <li><a href="">Visit Us</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="search">
+        </div>
+        <div class="line"></div>
+        <div class="content">
+            <h1>Every artist writes his own<br>autobiography</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus vel error atque, quam modi quae. Sapiente eligendi velit unde. Maxime iure ad sit reprehenderit ab quis sunt est cumque alias!</p>
+            <button class="btn">Explore</button>
+        </div>
+        <div class="social">
+            <ul>
+                <li> Facebook </li>
+                <li> Instagram </li>
+                <li> Twitter </li>
+            </ul>
+        </div>
+    </div>
 
-        </h1>
+    <div class="credit">
+    <p>
+       Photo by Luis del Río from Pexels
+    </p>
+
     </div>
 </body>
-
 </html>
