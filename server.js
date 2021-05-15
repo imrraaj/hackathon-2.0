@@ -1,39 +1,52 @@
-const http = require('http');
-const fs = require('fs');
-const home = fs.readFileSync('home.html');
-const about = fs.readFileSync('about.html');
-const contact = fs.readFileSync('contact.html');
-const services = fs.readFileSync('services.html');
-const error404 = fs.readFileSync('404.html');
+const express = require('express');
+const path = require('path');
 
+const app = express();
 const port = process.env.PORT || 3000;
+let title,cont;
+app.use('/static', express.static('static'));
+app.use(express.urlencoded());
 
-const server = http.createServer((req, res) => {
-    console.log(req.url);
+app.set('view engine', 'pug');
+app.set('views', path.join(__dirname, 'views'));
 
 
-    res.statusCode = 200;
-    res.setHeader('content-Type', 'text/html');
-    url = req.url;
+app.get('/',(req,res)=>{
+    const obj ={"Title":title,"Content":cont}; 
+    res.status(200).render('home',obj);
 
-    if (url == '/') {
-        res.end(home)
+});
+
+app.get('/content',(req,res)=>{
+    res.status(200).render('content');
+});
+app.post('/content',(req,res)=>{
+    title = req.body.name;
+    cont = req.body.text;
+    res.redirect('/');
+});
+
+app.get('/login',(req,res)=>{
+    res.status(200).render('login');
+
+});
+app.post('/login',(req,res)=>{
+    let name = req.body.name;
+    let pass = req.body.password;
+    if((name=="Sherlock")&&(pass=="221bBackerst."))
+    {
+        res.redirect('/content');
     }
-    else if (url == "/about") {
-        res.end(about);
-    }
-    else if (url == "/contact") {
-        res.end(contact);
-    }
-    else if (url == "/services") {
-        res.end(services);
-    }
-    else {
-        res.statusCode = 404;
-        res.end(error404);
+    else{
+        let param = {"veredict": "Wrong Id"}
+        res.status(200).render('login',param)
     }
 });
 
-server.listen(port,() => {
-    console.log(`server running`)
+app.get('/about',(req,res)=>{
+    res.status(200).render('about');
 });
+
+app.listen(port, () => {
+    console.log(`The app is live!`);
+})
